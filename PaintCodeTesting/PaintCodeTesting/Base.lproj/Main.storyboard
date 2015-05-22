@@ -53,7 +53,7 @@
         <!--Signup View Controller-->
         <scene sceneID="85f-ER-c8t">
             <objects>
-                <viewController id="wHU-uv-lKl" customClass="SignupViewController" customModule="PaintCodeTesting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wHU-uv-lKl" customClass="SignupViewController" customModule="PaintCodeTesting" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zNm-j1-o7t"/>
                         <viewControllerLayoutGuide type="bottom" id="fKL-bd-l8B"/>
@@ -107,7 +107,6 @@
                         <outlet property="ageField" destination="Cl0-f9-MbV" id="Dzg-8P-Ais"/>
                         <outlet property="locationField" destination="Jfa-ec-5dJ" id="5Ru-ph-PY5"/>
                         <outlet property="passwordField" destination="WtA-ev-Ksv" id="EJr-pl-4xI"/>
-                        <outlet property="signupButton" destination="t6s-f8-c9H" id="g0G-3l-Rki"/>
                         <outlet property="usernameField" destination="g3g-eA-5Hl" id="DXc-nC-tUV"/>
                     </connections>
                 </viewController>
