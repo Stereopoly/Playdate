@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55D3B6321B0EE85400F40CC5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3B6311B0EE85400F40CC5 /* Login.swift */; };
+		55D3B6341B0EEA8300F40CC5 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3B6331B0EEA8300F40CC5 /* Signup.swift */; };
 		55F210821B0EA890001CE4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210811B0EA890001CE4D0 /* AppDelegate.swift */; };
 		55F210841B0EA890001CE4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210831B0EA890001CE4D0 /* ViewController.swift */; };
 		55F210871B0EA890001CE4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F210851B0EA890001CE4D0 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		55D3B6311B0EE85400F40CC5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		55D3B6331B0EEA8300F40CC5 /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		55F2107C1B0EA890001CE4D0 /* PaintCodeTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintCodeTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F210801B0EA890001CE4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F210811B0EA890001CE4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				55F210811B0EA890001CE4D0 /* AppDelegate.swift */,
 				55F210831B0EA890001CE4D0 /* ViewController.swift */,
 				55F210851B0EA890001CE4D0 /* Main.storyboard */,
+				55D3B6331B0EEA8300F40CC5 /* Signup.swift */,
 				55D3B6311B0EE85400F40CC5 /* Login.swift */,
 				55F210881B0EA890001CE4D0 /* Images.xcassets */,
 				55F2108A1B0EA890001CE4D0 /* LaunchScreen.xib */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F210841B0EA890001CE4D0 /* ViewController.swift in Sources */,
+				55D3B6341B0EEA8300F40CC5 /* Signup.swift in Sources */,
 				55F210821B0EA890001CE4D0 /* AppDelegate.swift in Sources */,
 				55F210AA1B0EDCA0001CE4D0 /* Playdate1.swift in Sources */,
 				55D3B6321B0EE85400F40CC5 /* Login.swift in Sources */,

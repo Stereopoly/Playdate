@@ -217,15 +217,24 @@ public class Playdate1 : NSObject {
         polygonPath.fill()
     }
 
-    public class func drawSignUp() {
+    public class func drawSignUp(#frame: CGRect) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let background = UIColor(red: 0.000, green: 0.737, blue: 0.478, alpha: 1.000)
 
+
+        //// Subframes
+        let signupButton: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.76462 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.85157 + 0.5) - floor(frame.height * 0.76462 + 0.5))
+        let usernameField: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.28486 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.37181 + 0.5) - floor(frame.height * 0.28486 + 0.5))
+        let ageField: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.40480 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.49175 + 0.5) - floor(frame.height * 0.40480 + 0.5))
+        let passwordField: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.64468 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.73163 + 0.5) - floor(frame.height * 0.64468 + 0.5))
+        let locationField: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.52474 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.61169 + 0.5) - floor(frame.height * 0.52474 + 0.5))
+
+
         //// Welcome 2 Drawing
-        let welcome2Rect = CGRectMake(76, 90, 225, 70)
+        let welcome2Rect = CGRectMake(frame.minX + 76, frame.minY + 90, 225, 70)
         var welcome2TextContent = NSString(string: "Sign Up")
         let welcome2Style = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         welcome2Style.alignment = NSTextAlignment.Center
@@ -241,56 +250,41 @@ public class Playdate1 : NSObject {
 
         //// Signup Button
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(47, 510, 283, 58), cornerRadius: 5)
+        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(signupButton.minX + floor(signupButton.width * 0.00000 + 0.5), signupButton.minY + floor(signupButton.height * 0.00000 + 0.5), floor(signupButton.width * 1.00000 + 0.5) - floor(signupButton.width * 0.00000 + 0.5), floor(signupButton.height * 1.00000 + 0.5) - floor(signupButton.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectanglePath.fill()
-
-
-        //// Text Drawing
-        let textRect = CGRectMake(111, 519, 154, 40)
-        var textTextContent = NSString(string: "Sign Up")
-        let textStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
-        textStyle.alignment = NSTextAlignment.Center
-
-        let textFontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(23), NSForegroundColorAttributeName: background, NSParagraphStyleAttributeName: textStyle]
-
-        let textTextHeight: CGFloat = textTextContent.boundingRectWithSize(CGSizeMake(textRect.width, CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textFontAttributes, context: nil).size.height
-        CGContextSaveGState(context)
-        CGContextClipToRect(context, textRect);
-        textTextContent.drawInRect(CGRectMake(textRect.minX, textRect.minY + (textRect.height - textTextHeight) / 2, textRect.width, textTextHeight), withAttributes: textFontAttributes)
-        CGContextRestoreGState(context)
 
 
 
 
         //// Username Field
         //// Rectangle 8 Drawing
-        let rectangle8Path = UIBezierPath(roundedRect: CGRectMake(47, 190, 283, 58), cornerRadius: 5)
+        let rectangle8Path = UIBezierPath(roundedRect: CGRectMake(usernameField.minX + floor(usernameField.width * 0.00000 + 0.5), usernameField.minY + floor(usernameField.height * 0.00000 + 0.5), floor(usernameField.width * 1.00000 + 0.5) - floor(usernameField.width * 0.00000 + 0.5), floor(usernameField.height * 1.00000 + 0.5) - floor(usernameField.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle8Path.fill()
 
 
         //// Rectangle 9 Drawing
-        let rectangle9Path = UIBezierPath(roundedRect: CGRectMake(56, 197, 42.5, 43), cornerRadius: 6)
+        let rectangle9Path = UIBezierPath(roundedRect: CGRectMake(usernameField.minX + floor(usernameField.width * 0.03180 + 0.5), usernameField.minY + floor(usernameField.height * 0.12069 + 0.5), floor(usernameField.width * 0.18198) - floor(usernameField.width * 0.03180 + 0.5) + 0.5, floor(usernameField.height * 0.86207 + 0.5) - floor(usernameField.height * 0.12069 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle9Path.fill()
 
 
         //// Placeholder
         //// Oval 2 Drawing
-        var oval2Path = UIBezierPath(ovalInRect: CGRectMake(71, 204, 13, 15))
+        var oval2Path = UIBezierPath(ovalInRect: CGRectMake(usernameField.minX + floor(usernameField.width * 0.08481 + 0.5), usernameField.minY + floor(usernameField.height * 0.24138 + 0.5), floor(usernameField.width * 0.13074 + 0.5) - floor(usernameField.width * 0.08481 + 0.5), floor(usernameField.height * 0.50000 + 0.5) - floor(usernameField.height * 0.24138 + 0.5)))
         UIColor.whiteColor().setFill()
         oval2Path.fill()
 
 
         //// Oval 7 Drawing
-        var oval7Path = UIBezierPath(ovalInRect: CGRectMake(63, 219, 29, 25))
+        var oval7Path = UIBezierPath(ovalInRect: CGRectMake(usernameField.minX + floor(usernameField.width * 0.05654 + 0.5), usernameField.minY + floor(usernameField.height * 0.50000 + 0.5), floor(usernameField.width * 0.15901 + 0.5) - floor(usernameField.width * 0.05654 + 0.5), floor(usernameField.height * 0.93103 + 0.5) - floor(usernameField.height * 0.50000 + 0.5)))
         UIColor.whiteColor().setFill()
         oval7Path.fill()
 
 
         //// Rectangle 10 Drawing
-        let rectangle10Path = UIBezierPath(rect: CGRectMake(62, 231, 31, 9))
+        let rectangle10Path = UIBezierPath(rect: CGRectMake(usernameField.minX + floor(usernameField.width * 0.05300 + 0.5), usernameField.minY + floor(usernameField.height * 0.70690 + 0.5), floor(usernameField.width * 0.16254 + 0.5) - floor(usernameField.width * 0.05300 + 0.5), floor(usernameField.height * 0.86207 + 0.5) - floor(usernameField.height * 0.70690 + 0.5)))
         background.setFill()
         rectangle10Path.fill()
 
@@ -302,13 +296,13 @@ public class Playdate1 : NSObject {
         //// Age Field
         //// Field
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(47, 270, 283, 58), cornerRadius: 5)
+        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(ageField.minX + floor(ageField.width * 0.00000 + 0.5), ageField.minY + floor(ageField.height * 0.00000 + 0.5), floor(ageField.width * 1.00000 + 0.5) - floor(ageField.width * 0.00000 + 0.5), floor(ageField.height * 1.00000 + 0.5) - floor(ageField.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle2Path.fill()
 
 
         //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(roundedRect: CGRectMake(56, 277, 42.5, 43), cornerRadius: 6)
+        let rectangle3Path = UIBezierPath(roundedRect: CGRectMake(ageField.minX + floor(ageField.width * 0.03180 + 0.5), ageField.minY + floor(ageField.height * 0.12069 + 0.5), floor(ageField.width * 0.18198) - floor(ageField.width * 0.03180 + 0.5) + 0.5, floor(ageField.height * 0.86207 + 0.5) - floor(ageField.height * 0.12069 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle3Path.fill()
 
@@ -317,58 +311,43 @@ public class Playdate1 : NSObject {
 
         //// Age Icon 2
         //// Oval Drawing
-        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(66.5, 283, 3, 7))
+        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(ageField.minX + floor(ageField.width * 0.06890) + 0.5, ageField.minY + floor(ageField.height * 0.22414 + 0.5), floor(ageField.width * 0.07951) - floor(ageField.width * 0.06890), floor(ageField.height * 0.34483 + 0.5) - floor(ageField.height * 0.22414 + 0.5)))
         UIColor.whiteColor().setFill()
         ovalPath.fill()
 
 
         //// Bezier 2 Drawing
         var bezier2Path = UIBezierPath()
-        bezier2Path.moveToPoint(CGPointMake(92, 287))
-        bezier2Path.addLineToPoint(CGPointMake(92, 313))
-        bezier2Path.addLineToPoint(CGPointMake(62, 313))
-        bezier2Path.addLineToPoint(CGPointMake(62, 287))
-        bezier2Path.addLineToPoint(CGPointMake(65.68, 287))
-        bezier2Path.addCurveToPoint(CGPointMake(66.36, 289.76), controlPoint1: CGPointMake(65.71, 288), controlPoint2: CGPointMake(65.94, 288.99))
-        bezier2Path.addCurveToPoint(CGPointMake(69.68, 289.76), controlPoint1: CGPointMake(67.28, 291.41), controlPoint2: CGPointMake(68.76, 291.41))
-        bezier2Path.addCurveToPoint(CGPointMake(70.36, 287), controlPoint1: CGPointMake(70.1, 288.99), controlPoint2: CGPointMake(70.33, 288))
-        bezier2Path.addCurveToPoint(CGPointMake(84.04, 287), controlPoint1: CGPointMake(70.36, 287), controlPoint2: CGPointMake(77.87, 287))
-        bezier2Path.addCurveToPoint(CGPointMake(84.09, 287.65), controlPoint1: CGPointMake(84.05, 287.22), controlPoint2: CGPointMake(84.07, 287.44))
-        bezier2Path.addCurveToPoint(CGPointMake(84.73, 289.76), controlPoint1: CGPointMake(84.19, 288.42), controlPoint2: CGPointMake(84.4, 289.16))
-        bezier2Path.addCurveToPoint(CGPointMake(88.05, 289.76), controlPoint1: CGPointMake(85.64, 291.41), controlPoint2: CGPointMake(87.13, 291.41))
-        bezier2Path.addCurveToPoint(CGPointMake(88.73, 287), controlPoint1: CGPointMake(88.47, 288.99), controlPoint2: CGPointMake(88.7, 288))
-        bezier2Path.addCurveToPoint(CGPointMake(92, 287), controlPoint1: CGPointMake(90.63, 287), controlPoint2: CGPointMake(91.92, 287))
-        bezier2Path.addLineToPoint(CGPointMake(92, 287))
+        bezier2Path.moveToPoint(CGPointMake(ageField.minX + 0.15901 * ageField.width, ageField.minY + 0.29311 * ageField.height))
+        bezier2Path.addLineToPoint(CGPointMake(ageField.minX + 0.15901 * ageField.width, ageField.minY + 0.74138 * ageField.height))
+        bezier2Path.addLineToPoint(CGPointMake(ageField.minX + 0.05300 * ageField.width, ageField.minY + 0.74138 * ageField.height))
+        bezier2Path.addLineToPoint(CGPointMake(ageField.minX + 0.05300 * ageField.width, ageField.minY + 0.29310 * ageField.height))
+        bezier2Path.addLineToPoint(CGPointMake(ageField.minX + 0.06600 * ageField.width, ageField.minY + 0.29310 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.06841 * ageField.width, ageField.minY + 0.34061 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.06611 * ageField.width, ageField.minY + 0.31039 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.06692 * ageField.width, ageField.minY + 0.32740 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.08014 * ageField.width, ageField.minY + 0.34061 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.07165 * ageField.width, ageField.minY + 0.36922 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.07690 * ageField.width, ageField.minY + 0.36922 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.08256 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.08164 * ageField.width, ageField.minY + 0.32740 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.08244 * ageField.width, ageField.minY + 0.31039 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.13090 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.08256 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.10909 * ageField.width, ageField.minY + 0.29310 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.13107 * ageField.width, ageField.minY + 0.30430 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.13093 * ageField.width, ageField.minY + 0.29686 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.13098 * ageField.width, ageField.minY + 0.30061 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.13332 * ageField.width, ageField.minY + 0.34061 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.13140 * ageField.width, ageField.minY + 0.31761 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.13215 * ageField.width, ageField.minY + 0.33027 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.14504 * ageField.width, ageField.minY + 0.34061 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.13655 * ageField.width, ageField.minY + 0.36922 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.14180 * ageField.width, ageField.minY + 0.36922 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.14746 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.14654 * ageField.width, ageField.minY + 0.32740 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.14734 * ageField.width, ageField.minY + 0.31039 * ageField.height))
+        bezier2Path.addCurveToPoint(CGPointMake(ageField.minX + 0.15900 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint1: CGPointMake(ageField.minX + 0.15419 * ageField.width, ageField.minY + 0.29310 * ageField.height), controlPoint2: CGPointMake(ageField.minX + 0.15871 * ageField.width, ageField.minY + 0.29310 * ageField.height))
+        bezier2Path.addLineToPoint(CGPointMake(ageField.minX + 0.15901 * ageField.width, ageField.minY + 0.29311 * ageField.height))
         bezier2Path.closePath()
         UIColor.whiteColor().setFill()
         bezier2Path.fill()
 
 
         //// Oval 3 Drawing
-        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(85, 283, 3, 7))
+        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(ageField.minX + floor(ageField.width * 0.13428 + 0.5), ageField.minY + floor(ageField.height * 0.22414 + 0.5), floor(ageField.width * 0.14488 + 0.5) - floor(ageField.width * 0.13428 + 0.5), floor(ageField.height * 0.34483 + 0.5) - floor(ageField.height * 0.22414 + 0.5)))
         UIColor.whiteColor().setFill()
         oval3Path.fill()
 
 
         //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(rect: CGRectMake(66, 293, 22, 17))
+        let rectangle4Path = UIBezierPath(rect: CGRectMake(ageField.minX + floor(ageField.width * 0.06714 + 0.5), ageField.minY + floor(ageField.height * 0.39655 + 0.5), floor(ageField.width * 0.14488 + 0.5) - floor(ageField.width * 0.06714 + 0.5), floor(ageField.height * 0.68966 + 0.5) - floor(ageField.height * 0.39655 + 0.5)))
         background.setFill()
         rectangle4Path.fill()
-
-
-        //// Text 2 Drawing
-        let text2Rect = CGRectMake(67, 291, 19, 21)
-        var text2TextContent = NSString(string: "19")
-        let text2Style = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
-        text2Style.alignment = NSTextAlignment.Center
-
-        let text2FontAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(UIFont.labelFontSize()), NSForegroundColorAttributeName: UIColor.whiteColor(), NSParagraphStyleAttributeName: text2Style]
-
-        let text2TextHeight: CGFloat = text2TextContent.boundingRectWithSize(CGSizeMake(text2Rect.width, CGFloat.infinity), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: text2FontAttributes, context: nil).size.height
-        CGContextSaveGState(context)
-        CGContextClipToRect(context, text2Rect);
-        text2TextContent.drawInRect(CGRectMake(text2Rect.minX, text2Rect.minY + (text2Rect.height - text2TextHeight) / 2, text2Rect.width, text2TextHeight), withAttributes: text2FontAttributes)
-        CGContextRestoreGState(context)
 
 
 
@@ -377,47 +356,47 @@ public class Playdate1 : NSObject {
 
         //// Password Field
         //// Rectangle 5 Drawing
-        let rectangle5Path = UIBezierPath(roundedRect: CGRectMake(47, 430, 283, 58), cornerRadius: 5)
+        let rectangle5Path = UIBezierPath(roundedRect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.00000 + 0.5), passwordField.minY + floor(passwordField.height * 0.00000 + 0.5), floor(passwordField.width * 1.00000 + 0.5) - floor(passwordField.width * 0.00000 + 0.5), floor(passwordField.height * 1.00000 + 0.5) - floor(passwordField.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle5Path.fill()
 
 
         //// Rectangle 6 Drawing
-        let rectangle6Path = UIBezierPath(roundedRect: CGRectMake(56, 437, 42.5, 43), cornerRadius: 6)
+        let rectangle6Path = UIBezierPath(roundedRect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.03180 + 0.5), passwordField.minY + floor(passwordField.height * 0.12069 + 0.5), floor(passwordField.width * 0.18198) - floor(passwordField.width * 0.03180 + 0.5) + 0.5, floor(passwordField.height * 0.86207 + 0.5) - floor(passwordField.height * 0.12069 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle6Path.fill()
 
 
         //// Group 2
         //// Oval 4 Drawing
-        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(64, 443, 25, 26))
+        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.06007 + 0.5), passwordField.minY + floor(passwordField.height * 0.22414 + 0.5), floor(passwordField.width * 0.14841 + 0.5) - floor(passwordField.width * 0.06007 + 0.5), floor(passwordField.height * 0.67241 + 0.5) - floor(passwordField.height * 0.22414 + 0.5)))
         UIColor.whiteColor().setFill()
         oval4Path.fill()
 
 
         //// Oval 5 Drawing
-        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(67, 446, 19, 17))
+        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.07067 + 0.5), passwordField.minY + floor(passwordField.height * 0.27586 + 0.5), floor(passwordField.width * 0.13781 + 0.5) - floor(passwordField.width * 0.07067 + 0.5), floor(passwordField.height * 0.56897 + 0.5) - floor(passwordField.height * 0.27586 + 0.5)))
         background.setFill()
         oval5Path.fill()
 
 
         //// Rectangle 7 Drawing
-        let rectangle7Path = UIBezierPath(rect: CGRectMake(62, 455, 29, 19))
+        let rectangle7Path = UIBezierPath(rect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.05300 + 0.5), passwordField.minY + floor(passwordField.height * 0.43103 + 0.5), floor(passwordField.width * 0.15548 + 0.5) - floor(passwordField.width * 0.05300 + 0.5), floor(passwordField.height * 0.75862 + 0.5) - floor(passwordField.height * 0.43103 + 0.5)))
         UIColor.whiteColor().setFill()
         rectangle7Path.fill()
 
 
         //// Oval 8 Drawing
-        var oval8Path = UIBezierPath(ovalInRect: CGRectMake(73, 458, 8, 6))
+        var oval8Path = UIBezierPath(ovalInRect: CGRectMake(passwordField.minX + floor(passwordField.width * 0.09187 + 0.5), passwordField.minY + floor(passwordField.height * 0.48276 + 0.5), floor(passwordField.width * 0.12014 + 0.5) - floor(passwordField.width * 0.09187 + 0.5), floor(passwordField.height * 0.58621 + 0.5) - floor(passwordField.height * 0.48276 + 0.5)))
         background.setFill()
         oval8Path.fill()
 
 
         //// Polygon Drawing
         var polygonPath = UIBezierPath()
-        polygonPath.moveToPoint(CGPointMake(76.5, 461.25))
-        polygonPath.addLineToPoint(CGPointMake(81.7, 469.31))
-        polygonPath.addLineToPoint(CGPointMake(71.3, 469.31))
+        polygonPath.moveToPoint(CGPointMake(passwordField.minX + 0.10424 * passwordField.width, passwordField.minY + 0.53879 * passwordField.height))
+        polygonPath.addLineToPoint(CGPointMake(passwordField.minX + 0.12260 * passwordField.width, passwordField.minY + 0.67780 * passwordField.height))
+        polygonPath.addLineToPoint(CGPointMake(passwordField.minX + 0.08588 * passwordField.width, passwordField.minY + 0.67780 * passwordField.height))
         polygonPath.closePath()
         background.setFill()
         polygonPath.fill()
@@ -430,13 +409,13 @@ public class Playdate1 : NSObject {
         //// Location Field
         //// Field 2
         //// Rectangle 11 Drawing
-        let rectangle11Path = UIBezierPath(roundedRect: CGRectMake(47, 350, 283, 58), cornerRadius: 5)
+        let rectangle11Path = UIBezierPath(roundedRect: CGRectMake(locationField.minX + floor(locationField.width * 0.00000 + 0.5), locationField.minY + floor(locationField.height * 0.00000 + 0.5), floor(locationField.width * 1.00000 + 0.5) - floor(locationField.width * 0.00000 + 0.5), floor(locationField.height * 1.00000 + 0.5) - floor(locationField.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle11Path.fill()
 
 
         //// Rectangle 12 Drawing
-        let rectangle12Path = UIBezierPath(roundedRect: CGRectMake(56, 357, 42.5, 43), cornerRadius: 6)
+        let rectangle12Path = UIBezierPath(roundedRect: CGRectMake(locationField.minX + floor(locationField.width * 0.03180 + 0.5), locationField.minY + floor(locationField.height * 0.12069 + 0.5), floor(locationField.width * 0.18198) - floor(locationField.width * 0.03180 + 0.5) + 0.5, floor(locationField.height * 0.86207 + 0.5) - floor(locationField.height * 0.12069 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle12Path.fill()
 
@@ -444,30 +423,24 @@ public class Playdate1 : NSObject {
 
 
         //// Location icon
-        //// Oval 6 Drawing
-        var oval6Path = UIBezierPath(ovalInRect: CGRectMake(63, 363, 28, 24))
+        //// Bezier Drawing
+        var bezierPath = UIBezierPath()
+        bezierPath.moveToPoint(CGPointMake(locationField.minX + 0.14099 * locationField.width, locationField.minY + 0.28474 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.14189 * locationField.width, locationField.minY + 0.57345 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.16000 * locationField.width, locationField.minY + 0.36425 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.16030 * locationField.width, locationField.minY + 0.49239 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.14099 * locationField.width, locationField.minY + 0.57733 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.14160 * locationField.width, locationField.minY + 0.57476 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.14129 * locationField.width, locationField.minY + 0.57605 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.10612 * locationField.width, locationField.minY + 0.77524 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.14109 * locationField.width, locationField.minY + 0.57799 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.10612 * locationField.width, locationField.minY + 0.77524 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.07093 * locationField.width, locationField.minY + 0.57799 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.10590 * locationField.width, locationField.minY + 0.77524 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.07093 * locationField.width, locationField.minY + 0.57799 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.07012 * locationField.width, locationField.minY + 0.57345 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.07072 * locationField.width, locationField.minY + 0.57605 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.07042 * locationField.width, locationField.minY + 0.57476 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.07103 * locationField.width, locationField.minY + 0.28474 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.05171 * locationField.width, locationField.minY + 0.49239 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.05201 * locationField.width, locationField.minY + 0.36425 * locationField.height))
+        bezierPath.addLineToPoint(CGPointMake(locationField.minX + 0.07118 * locationField.width, locationField.minY + 0.28409 * locationField.height))
+        bezierPath.addCurveToPoint(CGPointMake(locationField.minX + 0.14099 * locationField.width, locationField.minY + 0.28474 * locationField.height), controlPoint1: CGPointMake(locationField.minX + 0.09051 * locationField.width, locationField.minY + 0.20394 * locationField.height), controlPoint2: CGPointMake(locationField.minX + 0.12172 * locationField.width, locationField.minY + 0.20415 * locationField.height))
+        bezierPath.closePath()
         UIColor.whiteColor().setFill()
-        oval6Path.fill()
-
-
-        //// Polygon 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 90.46, 395)
-        CGContextRotateCTM(context, 180 * CGFloat(M_PI) / 180)
-
-        var polygon2Path = UIBezierPath()
-        polygon2Path.moveToPoint(CGPointMake(13.46, -0))
-        polygon2Path.addLineToPoint(CGPointMake(25.11, 13.47))
-        polygon2Path.addLineToPoint(CGPointMake(1.8, 13.47))
-        polygon2Path.closePath()
-        UIColor.whiteColor().setFill()
-        polygon2Path.fill()
-
-        CGContextRestoreGState(context)
+        bezierPath.fill()
 
 
         //// Oval 9 Drawing
-        var oval9Path = UIBezierPath(ovalInRect: CGRectMake(70, 369, 14, 11))
+        var oval9Path = UIBezierPath(ovalInRect: CGRectMake(locationField.minX + floor(locationField.width * 0.08127 + 0.5), locationField.minY + floor(locationField.height * 0.32759 + 0.5), floor(locationField.width * 0.13074 + 0.5) - floor(locationField.width * 0.08127 + 0.5), floor(locationField.height * 0.51724 + 0.5) - floor(locationField.height * 0.32759 + 0.5)))
         background.setFill()
         oval9Path.fill()
     }
