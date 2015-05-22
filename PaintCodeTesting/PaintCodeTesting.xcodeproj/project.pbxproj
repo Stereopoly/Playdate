@@ -7,19 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55D3B6321B0EE85400F40CC5 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3B6311B0EE85400F40CC5 /* Login.swift */; };
 		55F210821B0EA890001CE4D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210811B0EA890001CE4D0 /* AppDelegate.swift */; };
 		55F210841B0EA890001CE4D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210831B0EA890001CE4D0 /* ViewController.swift */; };
 		55F210871B0EA890001CE4D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F210851B0EA890001CE4D0 /* Main.storyboard */; };
 		55F210891B0EA890001CE4D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F210881B0EA890001CE4D0 /* Images.xcassets */; };
 		55F2108C1B0EA890001CE4D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F2108A1B0EA890001CE4D0 /* LaunchScreen.xib */; };
 		55F210981B0EA890001CE4D0 /* PaintCodeTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210971B0EA890001CE4D0 /* PaintCodeTestingTests.swift */; };
-		55F210A81B0EDB90001CE4D0 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210A71B0EDB90001CE4D0 /* Placeholder.swift */; };
 		55F210AA1B0EDCA0001CE4D0 /* Playdate1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210A91B0EDCA0001CE4D0 /* Playdate1.swift */; };
-		55F210AC1B0EDF0F001CE4D0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210AB1B0EDF0F001CE4D0 /* Location.swift */; };
-		55F210AE1B0EE10B001CE4D0 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210AD1B0EE10B001CE4D0 /* Age.swift */; };
-		55F210B01B0EE163001CE4D0 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210AF1B0EE163001CE4D0 /* Mail.swift */; };
-		55F210B21B0EE1A9001CE4D0 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210B11B0EE1A9001CE4D0 /* Lock.swift */; };
-		55F210B41B0EE2E3001CE4D0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F210B31B0EE2E3001CE4D0 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55D3B6311B0EE85400F40CC5 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		55F2107C1B0EA890001CE4D0 /* PaintCodeTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintCodeTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F210801B0EA890001CE4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F210811B0EA890001CE4D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,13 +39,7 @@
 		55F210911B0EA890001CE4D0 /* PaintCodeTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintCodeTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F210961B0EA890001CE4D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F210971B0EA890001CE4D0 /* PaintCodeTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCodeTestingTests.swift; sourceTree = "<group>"; };
-		55F210A71B0EDB90001CE4D0 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		55F210A91B0EDCA0001CE4D0 /* Playdate1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playdate1.swift; sourceTree = "<group>"; };
-		55F210AB1B0EDF0F001CE4D0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		55F210AD1B0EE10B001CE4D0 /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
-		55F210AF1B0EE163001CE4D0 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
-		55F210B11B0EE1A9001CE4D0 /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
-		55F210B31B0EE2E3001CE4D0 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +85,7 @@
 				55F210811B0EA890001CE4D0 /* AppDelegate.swift */,
 				55F210831B0EA890001CE4D0 /* ViewController.swift */,
 				55F210851B0EA890001CE4D0 /* Main.storyboard */,
-				55F210B31B0EE2E3001CE4D0 /* Login.swift */,
-				55F210B11B0EE1A9001CE4D0 /* Lock.swift */,
-				55F210AF1B0EE163001CE4D0 /* Mail.swift */,
-				55F210AD1B0EE10B001CE4D0 /* Age.swift */,
-				55F210A71B0EDB90001CE4D0 /* Placeholder.swift */,
-				55F210AB1B0EDF0F001CE4D0 /* Location.swift */,
+				55D3B6311B0EE85400F40CC5 /* Login.swift */,
 				55F210881B0EA890001CE4D0 /* Images.xcassets */,
 				55F2108A1B0EA890001CE4D0 /* LaunchScreen.xib */,
 				55F2107F1B0EA890001CE4D0 /* Supporting Files */,
@@ -235,13 +220,8 @@
 			files = (
 				55F210841B0EA890001CE4D0 /* ViewController.swift in Sources */,
 				55F210821B0EA890001CE4D0 /* AppDelegate.swift in Sources */,
-				55F210AC1B0EDF0F001CE4D0 /* Location.swift in Sources */,
-				55F210AE1B0EE10B001CE4D0 /* Age.swift in Sources */,
-				55F210B01B0EE163001CE4D0 /* Mail.swift in Sources */,
-				55F210A81B0EDB90001CE4D0 /* Placeholder.swift in Sources */,
-				55F210B41B0EE2E3001CE4D0 /* Login.swift in Sources */,
-				55F210B21B0EE1A9001CE4D0 /* Lock.swift in Sources */,
 				55F210AA1B0EDCA0001CE4D0 /* Playdate1.swift in Sources */,
+				55D3B6321B0EE85400F40CC5 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +417,7 @@
 				55F2109D1B0EA890001CE4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55F2109E1B0EA890001CE4D0 /* Build configuration list for PBXNativeTarget "PaintCodeTestingTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +426,7 @@
 				55F210A01B0EA890001CE4D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

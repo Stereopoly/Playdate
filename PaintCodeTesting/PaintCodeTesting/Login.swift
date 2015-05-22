@@ -16,7 +16,7 @@ class Login: UIView {
     override func drawRect(rect: CGRect) {
         // Drawing code
         
-        Playdate1.drawLogin()
+        Playdate1.drawLogin(frame: self.bounds)
     }
     
 

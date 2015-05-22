@@ -33,56 +33,22 @@
                                     <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qad-Ed-TDP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passwordField" destination="hsK-tw-p6O" id="wtH-oO-3xo"/>
+                        <outlet property="usernameField" destination="29V-wm-KH0" id="dEL-MF-sov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="698.5" y="478.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="PGD-nk-moU">
-            <objects>
-                <viewController id="f2H-B6-v13" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rpP-79-2Im"/>
-                        <viewControllerLayoutGuide type="bottom" id="yUS-ZQ-7Ia"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yn8-YF-6eO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfS-e7-cQD" customClass="Placeholder" customModule="PaintCodeTesting">
-                                <rect key="frame" x="110" y="222" width="40" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ra9-pj-YFz" customClass="Mail" customModule="PaintCodeTesting">
-                                <rect key="frame" x="100" y="159" width="50" height="35"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-V9-eBc" customClass="Location" customModule="PaintCodeTesting">
-                                <rect key="frame" x="191" y="164" width="40" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-tY-Vu3" customClass="Age" customModule="PaintCodeTesting">
-                                <rect key="frame" x="110" y="300" width="40" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leK-G0-Snh" customClass="Lock" customModule="PaintCodeTesting">
-                                <rect key="frame" x="191" y="260" width="40" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9vc-gy-HIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1189.5" y="478.5"/>
         </scene>
     </scenes>
 </document>

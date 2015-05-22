@@ -16,15 +16,22 @@ public class Playdate1 : NSObject {
 
     //// Drawing Methods
 
-    public class func drawLogin() {
+    public class func drawLogin(#frame: CGRect) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
 
         //// Color Declarations
         let background = UIColor(red: 0.000, green: 0.737, blue: 0.478, alpha: 1.000)
 
+
+        //// Subframes
+        let password: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.54873 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.63418 + 0.5) - floor(frame.height * 0.54873 + 0.5))
+        let loginButton: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.69865 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.78411 + 0.5) - floor(frame.height * 0.69865 + 0.5))
+        let username: CGRect = CGRectMake(frame.minX + floor(frame.width * 0.12533 + 0.5), frame.minY + floor(frame.height * 0.39880 + 0.5), floor(frame.width * 0.88000 + 0.5) - floor(frame.width * 0.12533 + 0.5), floor(frame.height * 0.48426 + 0.5) - floor(frame.height * 0.39880 + 0.5))
+
+
         //// Welcome Drawing
-        let welcomeRect = CGRectMake(76, 90, 225, 70)
+        let welcomeRect = CGRectMake(frame.minX + floor(frame.width * 0.20267 + 0.5), frame.minY + floor(frame.height * 0.13493 + 0.5), floor(frame.width * 0.80267 + 0.5) - floor(frame.width * 0.20267 + 0.5), floor(frame.height * 0.23988 + 0.5) - floor(frame.height * 0.13493 + 0.5))
         var welcomeTextContent = NSString(string: "Welcome")
         let welcomeStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         welcomeStyle.alignment = NSTextAlignment.Center
@@ -40,47 +47,47 @@ public class Playdate1 : NSObject {
 
         //// Password
         //// Rectangle 2 Drawing
-        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(47, 365, 283, 58), cornerRadius: 5)
+        let rectangle2Path = UIBezierPath(roundedRect: CGRectMake(password.minX + floor(password.width * 0.00000 + 0.5), password.minY + floor(password.height * 0.00000 + 0.5), floor(password.width * 1.00000 + 0.5) - floor(password.width * 0.00000 + 0.5), floor(password.height * 1.00000 + 0.5) - floor(password.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle2Path.fill()
 
 
         //// Rectangle 4 Drawing
-        let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(56, 372, 42.5, 43), cornerRadius: 6)
+        let rectangle4Path = UIBezierPath(roundedRect: CGRectMake(password.minX + floor(password.width * 0.03180 + 0.5), password.minY + floor(password.height * 0.12281 + 0.5), floor(password.width * 0.18198) - floor(password.width * 0.03180 + 0.5) + 0.5, floor(password.height * 0.85965 + 0.5) - floor(password.height * 0.12281 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle4Path.fill()
 
 
         //// Group
         //// Oval 4 Drawing
-        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(64, 378, 25, 26))
+        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(password.minX + floor(password.width * 0.06007 + 0.5), password.minY + floor(password.height * 0.22807 + 0.5), floor(password.width * 0.14841 + 0.5) - floor(password.width * 0.06007 + 0.5), floor(password.height * 0.66667 + 0.5) - floor(password.height * 0.22807 + 0.5)))
         UIColor.whiteColor().setFill()
         oval4Path.fill()
 
 
         //// Oval 5 Drawing
-        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(67, 381, 19, 17))
+        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(password.minX + floor(password.width * 0.07067 + 0.5), password.minY + floor(password.height * 0.28070 + 0.5), floor(password.width * 0.13781 + 0.5) - floor(password.width * 0.07067 + 0.5), floor(password.height * 0.56140 + 0.5) - floor(password.height * 0.28070 + 0.5)))
         background.setFill()
         oval5Path.fill()
 
 
         //// Rectangle 5 Drawing
-        let rectangle5Path = UIBezierPath(rect: CGRectMake(62, 390, 29, 19))
+        let rectangle5Path = UIBezierPath(rect: CGRectMake(password.minX + floor(password.width * 0.05300 + 0.5), password.minY + floor(password.height * 0.43860 + 0.5), floor(password.width * 0.15548 + 0.5) - floor(password.width * 0.05300 + 0.5), floor(password.height * 0.75439 + 0.5) - floor(password.height * 0.43860 + 0.5)))
         UIColor.whiteColor().setFill()
         rectangle5Path.fill()
 
 
         //// Oval 6 Drawing
-        var oval6Path = UIBezierPath(ovalInRect: CGRectMake(73, 393, 8, 6))
+        var oval6Path = UIBezierPath(ovalInRect: CGRectMake(password.minX + floor(password.width * 0.09187 + 0.5), password.minY + floor(password.height * 0.49123 + 0.5), floor(password.width * 0.12014 + 0.5) - floor(password.width * 0.09187 + 0.5), floor(password.height * 0.57895 + 0.5) - floor(password.height * 0.49123 + 0.5)))
         background.setFill()
         oval6Path.fill()
 
 
         //// Polygon 2 Drawing
         var polygon2Path = UIBezierPath()
-        polygon2Path.moveToPoint(CGPointMake(76.5, 396.25))
-        polygon2Path.addLineToPoint(CGPointMake(81.7, 404.31))
-        polygon2Path.addLineToPoint(CGPointMake(71.3, 404.31))
+        polygon2Path.moveToPoint(CGPointMake(password.minX + 0.10424 * password.width, password.minY + 0.53070 * password.height))
+        polygon2Path.addLineToPoint(CGPointMake(password.minX + 0.12260 * password.width, password.minY + 0.67215 * password.height))
+        polygon2Path.addLineToPoint(CGPointMake(password.minX + 0.08588 * password.width, password.minY + 0.67215 * password.height))
         polygon2Path.closePath()
         background.setFill()
         polygon2Path.fill()
@@ -92,7 +99,7 @@ public class Playdate1 : NSObject {
 
         //// Login Button
         //// Rectangle 6 Drawing
-        let rectangle6Path = UIBezierPath(roundedRect: CGRectMake(47, 465, 283, 58), cornerRadius: 5)
+        let rectangle6Path = UIBezierPath(roundedRect: CGRectMake(loginButton.minX + floor(loginButton.width * 0.00000 + 0.5), loginButton.minY + floor(loginButton.height * 0.00000 + 0.5), floor(loginButton.width * 1.00000 + 0.5) - floor(loginButton.width * 0.00000 + 0.5), floor(loginButton.height * 1.00000 + 0.5) - floor(loginButton.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectangle6Path.fill()
 
@@ -101,32 +108,32 @@ public class Playdate1 : NSObject {
 
         //// Username
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(47, 265, 283, 58), cornerRadius: 5)
+        let rectanglePath = UIBezierPath(roundedRect: CGRectMake(username.minX + floor(username.width * 0.00000 + 0.5), username.minY + floor(username.height * 0.00000 + 0.5), floor(username.width * 1.00000 + 0.5) - floor(username.width * 0.00000 + 0.5), floor(username.height * 1.00000 + 0.5) - floor(username.height * 0.00000 + 0.5)), cornerRadius: 5)
         UIColor.whiteColor().setFill()
         rectanglePath.fill()
 
 
         //// Rectangle 3 Drawing
-        let rectangle3Path = UIBezierPath(roundedRect: CGRectMake(56, 272, 42.5, 43), cornerRadius: 6)
+        let rectangle3Path = UIBezierPath(roundedRect: CGRectMake(username.minX + floor(username.width * 0.03180 + 0.5), username.minY + floor(username.height * 0.12281 + 0.5), floor(username.width * 0.18198) - floor(username.width * 0.03180 + 0.5) + 0.5, floor(username.height * 0.85965 + 0.5) - floor(username.height * 0.12281 + 0.5)), cornerRadius: 6)
         background.setFill()
         rectangle3Path.fill()
 
 
         //// Placeholder 2
         //// Oval 3 Drawing
-        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(71, 279, 13, 15))
+        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(username.minX + floor(username.width * 0.08481 + 0.5), username.minY + floor(username.height * 0.24561 + 0.5), floor(username.width * 0.13074 + 0.5) - floor(username.width * 0.08481 + 0.5), floor(username.height * 0.50877 + 0.5) - floor(username.height * 0.24561 + 0.5)))
         UIColor.whiteColor().setFill()
         oval3Path.fill()
 
 
         //// Oval Drawing
-        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(63, 294, 29, 25))
+        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(username.minX + floor(username.width * 0.05654 + 0.5), username.minY + floor(username.height * 0.50877 + 0.5), floor(username.width * 0.15901 + 0.5) - floor(username.width * 0.05654 + 0.5), floor(username.height * 0.92982 + 0.5) - floor(username.height * 0.50877 + 0.5)))
         UIColor.whiteColor().setFill()
         ovalPath.fill()
 
 
         //// Rectangle 7 Drawing
-        let rectangle7Path = UIBezierPath(rect: CGRectMake(62, 306, 31, 9))
+        let rectangle7Path = UIBezierPath(rect: CGRectMake(username.minX + floor(username.width * 0.05300 + 0.5), username.minY + floor(username.height * 0.70175 + 0.5), floor(username.width * 0.16254 + 0.5) - floor(username.width * 0.05300 + 0.5), floor(username.height * 0.85965 + 0.5) - floor(username.height * 0.70175 + 0.5)))
         background.setFill()
         rectangle7Path.fill()
     }
