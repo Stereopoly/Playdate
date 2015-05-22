@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignupViewController.swift
 //  PaintCodeTesting
 //
 //  Created by Oscar Bjorkman on 5/21/15.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignupViewController: UIViewController {
 
     @IBOutlet var usernameField: UITextField!
+    @IBOutlet var ageField: UITextField!
+    @IBOutlet var locationField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    @IBAction func loginButton(sender: AnyObject) {
+    @IBAction func signupButton(sender: AnyObject) {
         
     }
     
@@ -22,12 +24,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
-
