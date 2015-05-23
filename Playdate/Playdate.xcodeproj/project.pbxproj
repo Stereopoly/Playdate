@@ -13,6 +13,10 @@
 		55B685351B102F1800CA2711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B685341B102F1800CA2711 /* Images.xcassets */; };
 		55B685381B102F1800CA2711 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B685361B102F1800CA2711 /* LaunchScreen.xib */; };
 		55B685441B102F1800CA2711 /* PlaydateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B685431B102F1800CA2711 /* PlaydateTests.swift */; };
+		55B6854E1B102F5F00CA2711 /* Playdate1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6854D1B102F5F00CA2711 /* Playdate1.swift */; };
+		55B685521B102FAC00CA2711 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B685511B102FAC00CA2711 /* Login.swift */; };
+		55B685541B10307100CA2711 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B685531B10307100CA2711 /* Signup.swift */; };
+		55B685561B10312300CA2711 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B685551B10312300CA2711 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		55B6853D1B102F1800CA2711 /* PlaydateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaydateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B685421B102F1800CA2711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B685431B102F1800CA2711 /* PlaydateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaydateTests.swift; sourceTree = "<group>"; };
+		55B6854D1B102F5F00CA2711 /* Playdate1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playdate1.swift; sourceTree = "<group>"; };
+		55B685511B102FAC00CA2711 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		55B685531B10307100CA2711 /* Signup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		55B685551B10312300CA2711 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +87,11 @@
 			children = (
 				55B6852D1B102F1800CA2711 /* AppDelegate.swift */,
 				55B6852F1B102F1800CA2711 /* ViewController.swift */,
+				55B6854D1B102F5F00CA2711 /* Playdate1.swift */,
 				55B685311B102F1800CA2711 /* Main.storyboard */,
+				55B685551B10312300CA2711 /* SignupViewController.swift */,
+				55B685531B10307100CA2711 /* Signup.swift */,
+				55B685511B102FAC00CA2711 /* Login.swift */,
 				55B685341B102F1800CA2711 /* Images.xcassets */,
 				55B685361B102F1800CA2711 /* LaunchScreen.xib */,
 				55B6852B1B102F1800CA2711 /* Supporting Files */,
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B685561B10312300CA2711 /* SignupViewController.swift in Sources */,
 				55B685301B102F1800CA2711 /* ViewController.swift in Sources */,
+				55B685541B10307100CA2711 /* Signup.swift in Sources */,
 				55B6852E1B102F1800CA2711 /* AppDelegate.swift in Sources */,
+				55B6854E1B102F5F00CA2711 /* Playdate1.swift in Sources */,
+				55B685521B102FAC00CA2711 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
