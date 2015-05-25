@@ -42,6 +42,23 @@
                                             <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rsi-N5-yKo"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-p7-nDe">
+                                        <rect key="frame" x="247" y="531" width="54" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EE7-ca-89C" kind="show" id="Hgt-Gg-q5M"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not registered?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P1-04-f5L">
+                                        <rect key="frame" x="74" y="537" width="119" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -52,6 +69,7 @@
                     <connections>
                         <outlet property="passwordField" destination="QpI-GO-xDw" id="ycS-fZ-eiO"/>
                         <outlet property="usernameField" destination="4IR-ta-gup" id="10V-2K-9Qf"/>
+                        <segue destination="WnV-0E-afu" kind="show" identifier="jumpToProfile" id="e0s-6A-sKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -85,7 +103,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-fY-za2">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-fY-za2">
                                         <rect key="frame" x="118" y="350" width="211" height="58"/>
                                         <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -108,6 +126,23 @@
                                             <action selector="signupButton:" destination="EE7-ca-89C" eventType="touchUpInside" id="w0p-yA-Xif"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Up-eb-XOk">
+                                        <rect key="frame" x="247" y="576" width="54" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="7Xc-tS-oLb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already registered?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9d-cD-8Zc">
+                                        <rect key="frame" x="74" y="582" width="149" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -120,11 +155,64 @@
                         <outlet property="locationField" destination="cZN-fY-za2" id="Nah-Qt-Z9s"/>
                         <outlet property="passwordField" destination="pJU-ce-vO2" id="iNS-Sl-bhC"/>
                         <outlet property="usernameField" destination="Jm2-CP-nEF" id="rMK-bI-jQD"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="jumpToLogin" id="DRz-kV-2iZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtr-7J-iqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912.5" y="511.5"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="jg2-jw-TQX">
+            <objects>
+                <viewController id="WnV-0E-afu" customClass="ProfileViewController" customModule="Playdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SoD-S9-wpC"/>
+                        <viewControllerLayoutGuide type="bottom" id="JTF-P6-sbW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uAo-pG-fuW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdj-Se-9Gb" customClass="Profile" customModule="Playdate">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mountain View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBY-3W-kad">
+                                        <rect key="frame" x="37" y="269" width="300" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oscar Bjorkman" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9P-el-IXv">
+                                        <rect key="frame" x="92" y="163" width="190" height="105"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gdj-Se-9Gb" firstAttribute="top" secondItem="uAo-pG-fuW" secondAttribute="top" id="LKh-iX-nk1"/>
+                            <constraint firstItem="gdj-Se-9Gb" firstAttribute="leading" secondItem="uAo-pG-fuW" secondAttribute="leading" id="OJt-qz-X7t"/>
+                            <constraint firstItem="gdj-Se-9Gb" firstAttribute="bottom" secondItem="JTF-P6-sbW" secondAttribute="top" id="Xgp-Db-yl5"/>
+                            <constraint firstAttribute="trailing" secondItem="gdj-Se-9Gb" secondAttribute="trailing" id="sH3-n7-d5e"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="DBY-3W-kad" id="mwK-9O-cFI"/>
+                        <outlet property="nameLabel" destination="X9P-el-IXv" id="Keg-3A-0HD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tw-3f-WmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441.5" y="511.5"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DRz-kV-2iZ"/>
+    </inferredMetricsTieBreakers>
 </document>
