@@ -75,6 +75,8 @@ class SignupViewController: UIViewController {
                     
                     self.displayAlert("Failed Signup", message: errorMessage)
                     
+                    println("Error in signup")
+                    
                 }
                 
             })
@@ -92,6 +94,10 @@ class SignupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {         // resign keyboard when tap outside
+        self.view.endEditing(true)
     }
     
     func displayAlert(title: String, message: String) {

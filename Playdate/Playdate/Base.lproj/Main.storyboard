@@ -40,6 +40,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rsi-N5-yKo"/>
+                                            <segue destination="P4g-kz-bs5" kind="show" id="GMj-Oy-aG6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-p7-nDe">
@@ -69,7 +70,7 @@
                     <connections>
                         <outlet property="passwordField" destination="QpI-GO-xDw" id="ycS-fZ-eiO"/>
                         <outlet property="usernameField" destination="4IR-ta-gup" id="10V-2K-9Qf"/>
-                        <segue destination="WnV-0E-afu" kind="show" identifier="jumpToProfile" id="e0s-6A-sKy"/>
+                        <segue destination="EE7-ca-89C" kind="show" identifier="jumpToSignup" id="gxz-bV-w2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -162,7 +163,7 @@
             </objects>
             <point key="canvasLocation" x="912.5" y="511.5"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="jg2-jw-TQX">
             <objects>
                 <viewController id="WnV-0E-afu" customClass="ProfileViewController" customModule="Playdate" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,10 +198,11 @@
                         <constraints>
                             <constraint firstItem="gdj-Se-9Gb" firstAttribute="top" secondItem="uAo-pG-fuW" secondAttribute="top" id="LKh-iX-nk1"/>
                             <constraint firstItem="gdj-Se-9Gb" firstAttribute="leading" secondItem="uAo-pG-fuW" secondAttribute="leading" id="OJt-qz-X7t"/>
-                            <constraint firstItem="gdj-Se-9Gb" firstAttribute="bottom" secondItem="JTF-P6-sbW" secondAttribute="top" id="Xgp-Db-yl5"/>
+                            <constraint firstItem="gdj-Se-9Gb" firstAttribute="bottom" secondItem="JTF-P6-sbW" secondAttribute="top" constant="49" id="Xgp-Db-yl5"/>
                             <constraint firstAttribute="trailing" secondItem="gdj-Se-9Gb" secondAttribute="trailing" id="sH3-n7-d5e"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="v4x-Ww-7Hx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="locationLabel" destination="DBY-3W-kad" id="mwK-9O-cFI"/>
@@ -209,10 +211,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tw-3f-WmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441.5" y="511.5"/>
+            <point key="canvasLocation" x="1919.5" y="511.5"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Cps-SR-l9f">
+            <objects>
+                <viewController id="46d-4b-8xs" customClass="SearchViewController" customModule="Playdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bvm-1N-ofO"/>
+                        <viewControllerLayoutGuide type="bottom" id="76M-d9-tty"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X3M-XO-aWx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13B-Pq-I92">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="13B-Pq-I92" secondAttribute="bottom" id="I21-8E-uDp"/>
+                            <constraint firstItem="13B-Pq-I92" firstAttribute="top" secondItem="X3M-XO-aWx" secondAttribute="top" id="LVB-TR-P83"/>
+                            <constraint firstAttribute="trailing" secondItem="13B-Pq-I92" secondAttribute="trailing" id="OBr-VE-Tyv"/>
+                            <constraint firstItem="13B-Pq-I92" firstAttribute="leading" secondItem="X3M-XO-aWx" secondAttribute="leading" id="UKR-i7-L9h"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" selectedImage="Playdate@3x.png" systemItem="search" id="XkX-Kt-5dl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXq-GO-o2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2355.5" y="511.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DFs-b7-OtV">
+            <objects>
+                <tabBarController id="P4g-kz-bs5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="YlX-FQ-ugh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WnV-0E-afu" kind="relationship" relationship="viewControllers" id="6Ep-kY-Qgx"/>
+                        <segue destination="46d-4b-8xs" kind="relationship" relationship="viewControllers" id="Sf1-yA-18Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLF-hd-ifC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484.5" y="511.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Playdate@3x.png" width="363" height="363"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DRz-kV-2iZ"/>
+        <segue reference="gxz-bV-w2O"/>
     </inferredMetricsTieBreakers>
 </document>

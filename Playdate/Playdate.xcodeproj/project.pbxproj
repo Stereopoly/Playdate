@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55657AAD1B13BB080057D0D9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55657AAC1B13BB080057D0D9 /* SearchViewController.swift */; };
 		5594660B1B12A4D000C9C200 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559466091B12A4D000C9C200 /* Bolts.framework */; };
 		5594660C1B12A4D000C9C200 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5594660A1B12A4D000C9C200 /* Parse.framework */; };
 		5594660E1B12A51B00C9C200 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5594660D1B12A51B00C9C200 /* AudioToolbox.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55657AAC1B13BB080057D0D9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		559466091B12A4D000C9C200 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5594660A1B12A4D000C9C200 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5594660D1B12A51B00C9C200 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -147,6 +149,7 @@
 				55B6852F1B102F1800CA2711 /* ViewController.swift */,
 				55B685551B10312300CA2711 /* SignupViewController.swift */,
 				559466231B12B74B00C9C200 /* ProfileViewController.swift */,
+				55657AAC1B13BB080057D0D9 /* SearchViewController.swift */,
 				559466251B12B76C00C9C200 /* Profile.swift */,
 				55B685531B10307100CA2711 /* Signup.swift */,
 				55B685511B102FAC00CA2711 /* Login.swift */,
@@ -285,6 +288,7 @@
 				55B685561B10312300CA2711 /* SignupViewController.swift in Sources */,
 				559466261B12B76C00C9C200 /* Profile.swift in Sources */,
 				55B685301B102F1800CA2711 /* ViewController.swift in Sources */,
+				55657AAD1B13BB080057D0D9 /* SearchViewController.swift in Sources */,
 				55B685541B10307100CA2711 /* Signup.swift in Sources */,
 				55B6852E1B102F1800CA2711 /* AppDelegate.swift in Sources */,
 				559466241B12B74B00C9C200 /* ProfileViewController.swift in Sources */,

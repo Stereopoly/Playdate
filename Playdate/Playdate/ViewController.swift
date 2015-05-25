@@ -71,6 +71,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {         // resign keyboard when tap outside
+        self.view.endEditing(true)
+    }
+    
     func displayAlert(title: String, message: String) {
         
         var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
