@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM" customClass="Login" customModule="Playdate">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM" customClass="Login" customModule="Playdate">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IR-ta-gup">
@@ -65,6 +65,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YKN-5C-EFM" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="4PR-2Q-Q9x"/>
+                            <constraint firstItem="YKN-5C-EFM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IZp-vg-mqi"/>
+                            <constraint firstItem="YKN-5C-EFM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MEG-se-6aR"/>
+                            <constraint firstAttribute="trailing" secondItem="YKN-5C-EFM" secondAttribute="trailing" id="ZEC-bN-HoW"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -89,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-Gi-98H" customClass="Signup" customModule="Playdate">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-Gi-98H" customClass="Signup" customModule="Playdate">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jm2-CP-nEF">
@@ -149,6 +155,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AQk-Gi-98H" firstAttribute="top" secondItem="kpC-Zl-TIq" secondAttribute="top" id="GD3-vw-Xhb"/>
+                            <constraint firstItem="AQk-Gi-98H" firstAttribute="leading" secondItem="kpC-Zl-TIq" secondAttribute="leading" id="Is9-L1-M7s"/>
+                            <constraint firstAttribute="trailing" secondItem="AQk-Gi-98H" secondAttribute="trailing" id="dF0-vw-AKm"/>
+                            <constraint firstItem="AQk-Gi-98H" firstAttribute="bottom" secondItem="byo-0W-Hte" secondAttribute="top" id="o7T-Qh-Pji"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -179,14 +191,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mountain View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBY-3W-kad">
-                                        <rect key="frame" x="37" y="269" width="300" height="38"/>
+                                        <rect key="frame" x="37" y="263" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oscar Bjorkman" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9P-el-IXv">
-                                        <rect key="frame" x="92" y="163" width="190" height="105"/>
+                                        <rect key="frame" x="92" y="170" width="190" height="105"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uwv-9Q-JoF">
+                                        <rect key="frame" x="0.0" y="323" width="375" height="269"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ZXo-wQ-OEy">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZXo-wQ-OEy" id="EuU-3j-Rth">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-w9-Epg">
+                                        <rect key="frame" x="8" y="294" width="66" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -202,16 +232,71 @@
                             <constraint firstAttribute="trailing" secondItem="gdj-Se-9Gb" secondAttribute="trailing" id="sH3-n7-d5e"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="v4x-Ww-7Hx"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Playdate.png" id="v4x-Ww-7Hx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="locationLabel" destination="DBY-3W-kad" id="mwK-9O-cFI"/>
                         <outlet property="nameLabel" destination="X9P-el-IXv" id="Keg-3A-0HD"/>
+                        <outlet property="tableView" destination="uwv-9Q-JoF" id="jEK-eb-iH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tw-3f-WmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1919.5" y="511.5"/>
+        </scene>
+        <!--Add Interest-->
+        <scene sceneID="ue0-Z6-5qf">
+            <objects>
+                <viewController id="Blg-ki-Bok" customClass="AddInterestViewController" customModule="Playdate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfL-oW-x3E"/>
+                        <viewControllerLayoutGuide type="bottom" id="3AC-wE-oal"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3FS-IX-dyR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KO-YI-WId" customClass="AddInterest" customModule="Playdate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Interest" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRi-dX-fND">
+                                        <rect key="frame" x="119" y="231" width="211" height="58"/>
+                                        <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
+                                        <rect key="frame" x="46" y="421" width="283" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addInterestButton:" destination="Blg-ki-Bok" eventType="touchUpInside" id="lDM-5G-2bA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3KO-YI-WId" firstAttribute="top" secondItem="3FS-IX-dyR" secondAttribute="top" id="GBA-KR-ZKB"/>
+                            <constraint firstAttribute="bottom" secondItem="3KO-YI-WId" secondAttribute="bottom" id="Ol4-Is-iRV"/>
+                            <constraint firstItem="3KO-YI-WId" firstAttribute="leading" secondItem="3FS-IX-dyR" secondAttribute="leading" id="hsG-md-myJ"/>
+                            <constraint firstAttribute="trailing" secondItem="3KO-YI-WId" secondAttribute="trailing" id="nCv-83-pzi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Interest" image="Star.png" id="JUP-Tz-Qpt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="interestField" destination="hRi-dX-fND" id="uCL-ki-Qgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scO-fC-KJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.5" y="1258.5"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Cps-SR-l9f">
@@ -257,6 +342,7 @@
                     <connections>
                         <segue destination="WnV-0E-afu" kind="relationship" relationship="viewControllers" id="6Ep-kY-Qgx"/>
                         <segue destination="46d-4b-8xs" kind="relationship" relationship="viewControllers" id="Sf1-yA-18Y"/>
+                        <segue destination="Blg-ki-Bok" kind="relationship" relationship="viewControllers" id="szy-ZB-IsN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLF-hd-ifC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,7 +351,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Playdate.png" width="30" height="30"/>
         <image name="Playdate@3x.png" width="363" height="363"/>
+        <image name="Star.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DRz-kV-2iZ"/>

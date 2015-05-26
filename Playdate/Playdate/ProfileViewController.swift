@@ -10,11 +10,17 @@ import UIKit
 import Parse
 import Bolts
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var nameLabel: UILabel!
     
     @IBOutlet var locationLabel: UILabel!
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var interests = ["Tennis", "Soccer", "Coding"]
+    
+    let textCellIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,26 @@ class ProfileViewController: UIViewController {
         
         nameLabel.text = PFUser.currentUser()?.username
         locationLabel.text = ""
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return interests.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
+        
+        cell.textLabel?.text = interests[indexPath.row]
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
