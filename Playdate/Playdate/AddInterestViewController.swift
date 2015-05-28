@@ -12,18 +12,26 @@ class AddInterestViewController: UIViewController {
     
     var interest:String = ""
     
-    @IBOutlet var interestField: UITextField!
+    @IBOutlet var addInterestField: UITextField!
     
     @IBAction func addInterestButton(sender: AnyObject) {
         
-        if interestField.text == "" {
+        if (addInterestField.text == "" || addInterestField.text == " " && addInterestField.text != nil){
             println("nothing")
         }
         else {
         
-            interestField.text = interest
-            println(interestField.text)
-        
+            println(addInterestField.text)
+            
+//            addInterestField.text = interest
+//            
+//            println(interest)
+            
+            interests.append(addInterestField.text)
+            
+            println(interests)
+            
+            displayAlert("Interest Added!", message: "Successfully added interest")
         }
         
     }
@@ -41,6 +49,16 @@ class AddInterestViewController: UIViewController {
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {         // resign keyboard when tap outside
         self.view.endEditing(true)
+    }
+    
+    func displayAlert(title: String, message: String) {
+        
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (ACTION) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 

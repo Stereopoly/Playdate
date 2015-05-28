@@ -10,6 +10,8 @@ import UIKit
 import Parse
 import Bolts
 
+var interests:[String] = []
+
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var nameLabel: UILabel!
@@ -17,8 +19,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var locationLabel: UILabel!
     
     @IBOutlet var tableView: UITableView!
-    
-    var interests = ["Tennis", "Soccer", "Coding"]
     
     let textCellIdentifier = "cell"
     
@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.tableView.reloadData()
         
     }
     
@@ -49,6 +51,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.text = interests[indexPath.row]
         
         return cell
+    }
+    
+    override func viewWillAppear(animated: Bool) {     // updates table view after adding items
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
