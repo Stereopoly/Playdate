@@ -14,6 +14,13 @@ class AddInterestViewController: UIViewController {
     
     @IBOutlet var addInterestField: UITextField!
     
+    @IBOutlet var interestAdded: UILabel!
+    
+    @IBAction func interestFieldChange(sender: AnyObject) {     // added interest notification goes away after editing again
+        
+        interestAdded.hidden = true
+        
+    }
     @IBAction func addInterestButton(sender: AnyObject) {
         
         if (addInterestField.text == "" || addInterestField.text == " " && addInterestField.text != nil){
@@ -31,7 +38,9 @@ class AddInterestViewController: UIViewController {
             
             println(interests)
             
-            displayAlert("Interest Added!", message: "Successfully added interest")
+            interestAdded.hidden = false
+            
+//            displayAlert("Interest Added!", message: "Successfully added interest")
         }
         
     }
@@ -40,6 +49,8 @@ class AddInterestViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        interestAdded.hidden = true
     }
 
     override func didReceiveMemoryWarning() {

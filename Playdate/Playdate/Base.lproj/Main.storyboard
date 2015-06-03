@@ -264,6 +264,9 @@
                                         <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <connections>
+                                            <action selector="interestFieldChange:" destination="Blg-ki-Bok" eventType="editingDidBegin" id="0yN-BE-z09"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
                                         <rect key="frame" x="46" y="421" width="283" height="58"/>
@@ -276,6 +279,12 @@
                                             <action selector="addInterestButton:" destination="Blg-ki-Bok" eventType="touchUpInside" id="lDM-5G-2bA"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interest Added!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-2P-8Jj">
+                                        <rect key="frame" x="120" y="369" width="135" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -292,6 +301,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addInterestField" destination="hRi-dX-fND" id="7p0-Pr-QfF"/>
+                        <outlet property="interestAdded" destination="dC5-2P-8Jj" id="wkm-In-otM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scO-fC-KJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
