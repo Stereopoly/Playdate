@@ -10,6 +10,8 @@ import UIKit
 import Parse
 import Bolts
 
+var loggedIn:Bool = false
+
 class ViewController: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet var usernameField: UITextField!
@@ -41,6 +43,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
                 
                 println("Logged in")
                 
+                PFUser.currentUser()!.fetch()
+                
                 self.performSegueWithIdentifier("jumpToProfile", sender: self)
                 
             }
@@ -63,6 +67,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var currentUser = PFUser.currentUser()
+        
+        if currentUser != nil {
+            performSegueWithIdentifier("jumpToProfile", sender: self) // go directly to profile if logged in before
+        }
     }
     
 

@@ -49,6 +49,7 @@ class SignupViewController: UIViewController {
             user.password = passwordField.text
             user["age"] = ageField.text
             user["location"] = locationField.text.uppercaseString    // set to uppercase for easier querying
+            user["interests"] = nil
             
             var errorMessage = "Please try again later"
             

@@ -27,13 +27,25 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // Do any additional setup after loading the view.
         
-        nameLabel.text = PFUser.currentUser()?.username
-        locationLabel.text = ""
+        if loggedIn == false {
+            
+            performSegueWithIdentifier("segueProfileToLogin", sender: self)    // if not logged in and somehow got to profile page
+            
+        }
+        if loggedIn == true {
+            
+            nameLabel.text = PFUser.currentUser()?.username
+            locationLabel.text = ""
         
-        tableView.delegate = self
-        tableView.dataSource = self
+            tableView.delegate = self
+            tableView.dataSource = self
         
-        self.tableView.reloadData()
+            self.tableView.reloadData()
+        
+        }
+        else {
+            println("Error with loggedIn bool")
+        }
         
     }
     

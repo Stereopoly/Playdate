@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class AddInterestViewController: UIViewController {
     
@@ -40,7 +42,15 @@ class AddInterestViewController: UIViewController {
             
             interestAdded.hidden = false
             
+      //      PFUser.currentUser()!["interests"]
+            
+            if let userInterestData: AnyObject = PFUser.currentUser()!["interests"] {
+                println(userInterestData)
+            }
+            
 //            displayAlert("Interest Added!", message: "Successfully added interest")
+            
+            PFUser.currentUser()!.fetch()    // update user
         }
         
     }
@@ -51,6 +61,9 @@ class AddInterestViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         interestAdded.hidden = true
+        
+        PFUser.currentUser()!.fetch()    // update user
+        
     }
 
     override func didReceiveMemoryWarning() {
