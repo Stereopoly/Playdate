@@ -42,11 +42,13 @@ class SignupViewController: UIViewController {
             activityIndicator.startAnimating()    // start the indicator
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()    // stop allowing user to access view
             
+            // Push data entered to Parse database
+            
             var user = PFUser()
             user.username = usernameField.text
             user.password = passwordField.text
             user["age"] = ageField.text
-            user["location"] = locationField.text
+            user["location"] = locationField.text.uppercaseString    // set to uppercase for easier querying
             
             var errorMessage = "Please try again later"
             
