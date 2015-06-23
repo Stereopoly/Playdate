@@ -27,6 +27,8 @@ class AddInterestViewController: UIViewController {
         
         if (addInterestField.text == "" || addInterestField.text == " " && addInterestField.text != nil){
             println("nothing")
+            interestAdded.text = "Please enter an interest"
+            interestAdded.hidden = false
         }
         else {
         
@@ -40,6 +42,7 @@ class AddInterestViewController: UIViewController {
             
             println(interests)
             
+            interestAdded.text = "Interest added!"
             interestAdded.hidden = false
             
       //      PFUser.currentUser()!["interests"]
@@ -61,6 +64,10 @@ class AddInterestViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         interestAdded.hidden = true
+        
+        if PFUser.currentUser() == nil {
+            performSegueWithIdentifier("segueToLogin", sender: self)
+        }
         
         PFUser.currentUser()!.fetch()    // update user
         

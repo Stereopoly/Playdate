@@ -26,13 +26,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if loggedIn == false {
             
             performSegueWithIdentifier("segueProfileToLogin", sender: self)    // if not logged in and somehow got to profile page
-            
-        }
-        if loggedIn == true {
             
             nameLabel.text = PFUser.currentUser()?.username
             locationLabel.text = ""
@@ -41,11 +36,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             tableView.dataSource = self
         
             self.tableView.reloadData()
-        
-        }
-        else {
-            println("Error with loggedIn bool")
-        }
         
     }
     

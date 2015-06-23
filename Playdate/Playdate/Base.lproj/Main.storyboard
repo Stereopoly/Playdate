@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM" customClass="Login" customModule="Playdate">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM" customClass="Login" customModule="Playdate">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IR-ta-gup">
@@ -40,7 +40,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rsi-N5-yKo"/>
-                                            <segue destination="P4g-kz-bs5" kind="show" id="GMj-Oy-aG6"/>
+                                            <segue destination="P4g-kz-bs5" kind="show" identifier="jumpToProfile" id="GMj-Oy-aG6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-p7-nDe">
@@ -269,8 +269,11 @@
                                             <action selector="interestFieldChange:" destination="Blg-ki-Bok" eventType="editingDidBegin" id="0yN-BE-z09"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
                                         <rect key="frame" x="46" y="421" width="283" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="J6F-t4-Ggr"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -280,14 +283,22 @@
                                             <action selector="addInterestButton:" destination="Blg-ki-Bok" eventType="touchUpInside" id="lDM-5G-2bA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interest Added!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-2P-8Jj">
-                                        <rect key="frame" x="120" y="369" width="135" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Added!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-2P-8Jj">
+                                        <rect key="frame" x="37" y="369" width="300" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dOp-gE-WwY" secondAttribute="bottom" constant="188" id="Nag-X1-Dip"/>
+                                    <constraint firstItem="dC5-2P-8Jj" firstAttribute="leading" secondItem="3KO-YI-WId" secondAttribute="leading" constant="37" id="cJ1-tM-Sj6"/>
+                                    <constraint firstItem="dC5-2P-8Jj" firstAttribute="centerX" secondItem="dOp-gE-WwY" secondAttribute="centerX" id="eac-fy-sE8"/>
+                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="leading" secondItem="3KO-YI-WId" secondAttribute="leading" constant="46" id="sXX-w8-C6U"/>
+                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="centerX" secondItem="3KO-YI-WId" secondAttribute="centerX" id="tXn-1D-EGq"/>
+                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="top" secondItem="dC5-2P-8Jj" secondAttribute="bottom" constant="31" id="zEq-u4-KNx"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -303,6 +314,7 @@
                     <connections>
                         <outlet property="addInterestField" destination="hRi-dX-fND" id="7p0-Pr-QfF"/>
                         <outlet property="interestAdded" destination="dC5-2P-8Jj" id="wkm-In-otM"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="segueToLogin" id="FCk-Oy-Y5p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scO-fC-KJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +379,7 @@
         <image name="Star.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gxz-bV-w2O"/>
-        <segue reference="yV2-Gd-hn9"/>
+        <segue reference="FCk-Oy-Y5p"/>
+        <segue reference="Hgt-Gg-q5M"/>
     </inferredMetricsTieBreakers>
 </document>

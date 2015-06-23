@@ -10,7 +10,6 @@ import UIKit
 import Parse
 import Bolts
 
-var loggedIn:Bool = false
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
 
