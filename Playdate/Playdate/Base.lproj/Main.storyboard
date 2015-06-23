@@ -16,23 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM" customClass="Login" customModule="Playdate">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKN-5C-EFM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IR-ta-gup">
                                         <rect key="frame" x="119" y="266" width="211" height="57"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QpI-GO-xDw">
                                         <rect key="frame" x="119" y="366" width="211" height="57"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NB1-Cs-V7p">
                                         <rect key="frame" x="46" y="465" width="283" height="58"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,13 +63,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4K2-T4-M1h" customClass="Person" customModule="Playdate">
+                                        <rect key="frame" x="64" y="280" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YKN-5C-EFM" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="4PR-2Q-Q9x"/>
+                            <constraint firstItem="YKN-5C-EFM" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" constant="49" id="4PR-2Q-Q9x"/>
                             <constraint firstItem="YKN-5C-EFM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IZp-vg-mqi"/>
                             <constraint firstItem="YKN-5C-EFM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="MEG-se-6aR"/>
                             <constraint firstAttribute="trailing" secondItem="YKN-5C-EFM" secondAttribute="trailing" id="ZEC-bN-HoW"/>
@@ -269,11 +276,8 @@
                                             <action selector="interestFieldChange:" destination="Blg-ki-Bok" eventType="editingDidBegin" id="0yN-BE-z09"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-gE-WwY">
                                         <rect key="frame" x="46" y="421" width="283" height="58"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="J6F-t4-Ggr"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,7 +287,7 @@
                                             <action selector="addInterestButton:" destination="Blg-ki-Bok" eventType="touchUpInside" id="lDM-5G-2bA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Added!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-2P-8Jj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interest Added!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC5-2P-8Jj">
                                         <rect key="frame" x="37" y="369" width="300" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -291,14 +295,6 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dOp-gE-WwY" secondAttribute="bottom" constant="188" id="Nag-X1-Dip"/>
-                                    <constraint firstItem="dC5-2P-8Jj" firstAttribute="leading" secondItem="3KO-YI-WId" secondAttribute="leading" constant="37" id="cJ1-tM-Sj6"/>
-                                    <constraint firstItem="dC5-2P-8Jj" firstAttribute="centerX" secondItem="dOp-gE-WwY" secondAttribute="centerX" id="eac-fy-sE8"/>
-                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="leading" secondItem="3KO-YI-WId" secondAttribute="leading" constant="46" id="sXX-w8-C6U"/>
-                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="centerX" secondItem="3KO-YI-WId" secondAttribute="centerX" id="tXn-1D-EGq"/>
-                                    <constraint firstItem="dOp-gE-WwY" firstAttribute="top" secondItem="dC5-2P-8Jj" secondAttribute="bottom" constant="31" id="zEq-u4-KNx"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -380,6 +376,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FCk-Oy-Y5p"/>
-        <segue reference="Hgt-Gg-q5M"/>
+        <segue reference="gxz-bV-w2O"/>
     </inferredMetricsTieBreakers>
 </document>

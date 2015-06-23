@@ -11,6 +11,7 @@
 		550044DD1B1539CD0022ECC1 /* AddInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550044DC1B1539CD0022ECC1 /* AddInterest.swift */; };
 		550044DF1B153A580022ECC1 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 550044DE1B153A580022ECC1 /* Star.png */; };
 		550044E11B153B7C0022ECC1 /* Playdate.png in Resources */ = {isa = PBXBuildFile; fileRef = 550044E01B153B7C0022ECC1 /* Playdate.png */; };
+		55422C5E1B39EF9300579376 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55422C5D1B39EF9300579376 /* Person.swift */; };
 		55657AAD1B13BB080057D0D9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55657AAC1B13BB080057D0D9 /* SearchViewController.swift */; };
 		5594660B1B12A4D000C9C200 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559466091B12A4D000C9C200 /* Bolts.framework */; };
 		5594660C1B12A4D000C9C200 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5594660A1B12A4D000C9C200 /* Parse.framework */; };
@@ -54,6 +55,7 @@
 		550044DC1B1539CD0022ECC1 /* AddInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInterest.swift; sourceTree = "<group>"; };
 		550044DE1B153A580022ECC1 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		550044E01B153B7C0022ECC1 /* Playdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playdate.png; sourceTree = "<group>"; };
+		55422C5D1B39EF9300579376 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		55657AAC1B13BB080057D0D9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		559466091B12A4D000C9C200 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5594660A1B12A4D000C9C200 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				550044DC1B1539CD0022ECC1 /* AddInterest.swift */,
 				55B685531B10307100CA2711 /* Signup.swift */,
 				55B685511B102FAC00CA2711 /* Login.swift */,
+				55422C5D1B39EF9300579376 /* Person.swift */,
 				55B685341B102F1800CA2711 /* Images.xcassets */,
 				55B685361B102F1800CA2711 /* LaunchScreen.xib */,
 				55B6852B1B102F1800CA2711 /* Supporting Files */,
@@ -305,6 +308,7 @@
 				550044DD1B1539CD0022ECC1 /* AddInterest.swift in Sources */,
 				55657AAD1B13BB080057D0D9 /* SearchViewController.swift in Sources */,
 				55B685541B10307100CA2711 /* Signup.swift in Sources */,
+				55422C5E1B39EF9300579376 /* Person.swift in Sources */,
 				55B6852E1B102F1800CA2711 /* AppDelegate.swift in Sources */,
 				559466241B12B74B00C9C200 /* ProfileViewController.swift in Sources */,
 				55B6854E1B102F5F00CA2711 /* Playdate1.swift in Sources */,

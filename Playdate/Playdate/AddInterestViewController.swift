@@ -68,9 +68,9 @@ class AddInterestViewController: UIViewController {
         if PFUser.currentUser() == nil {
             performSegueWithIdentifier("segueToLogin", sender: self)
         }
-        
-        PFUser.currentUser()!.fetch()    // update user
-        
+        else {
+            PFUser.currentUser()!.fetch()    // update user
+        }
     }
 
     override func didReceiveMemoryWarning() {
